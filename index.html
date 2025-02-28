@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Roller API Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .result {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dice Roller API Test</h1>
+  <label for="sides">Select Dice Sides:</label>
+  <select id="sides">
+    <option value="6">6 Sides</option>
+    <option value="10">10 Sides</option>
+    <option value="20">20 Sides</option>
+  </select>
+  <br><br>
+  <button onclick="rollDice()">Roll the Dice</button>
+  
+  <div class="result" id="result"></div>
+
+  <script>
+  function rollDice() {
+    const sides = document.getElementById('sides').value;
+
+    fetch(`/roll?sides=${sides}`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("result").innerHTML = `Rolled: ${data.roll}`;
+      })
+      .catch(error => console.error("Error:", error));
+  }
+	  
+</script>
+</body>
+</html>
