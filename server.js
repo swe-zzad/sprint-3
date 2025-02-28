@@ -3,7 +3,7 @@ const path = require('path');
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 
 //app.use(cors({ origin: "https://sprint-3-b8d8b6aqgzdnavez.uaenorth-01.azurewebsites.net/", methods: ["GET", "POST", "UPDATE"] }));
