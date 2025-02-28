@@ -5,9 +5,7 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-
-//app.use(cors({ origin: "https://sprint-3-b8d8b6aqgzdnavez.uaenorth-01.azurewebsites.net/", methods: ["GET", "POST", "UPDATE"] }));
-
+app.use(cors()); 
 // Serve static files from the current directory
 app.use(express.static(path.join(__dirname)));
 
