@@ -38,7 +38,7 @@
   function rollDice() {
     const sides = document.getElementById('sides').value;
 
-fetch('http://localhost:8080/roll?sides=' + sides)
+fetch('https://sprint-3-b8d8b6aqgzdnavez.uaenorth-01.azurewebsites.net/roll?sides=' + sides)
 
       .then(response => response.json())
       .then(data => {
