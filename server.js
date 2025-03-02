@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Enable CORS for frontend
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: '*', method: ["GET", "POST" ,"UPDATE"]}));
 
 // Serve static files from 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
