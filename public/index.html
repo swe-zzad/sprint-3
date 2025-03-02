@@ -48,7 +48,7 @@
 </head>
 
 <body>
-  <h1>Dice Roller API Test</h1>
+  <h1>Dice Roller</h1>
   <label for="sides">Select Dice Sides:</label>
   <select id="sides">
     <option value="6">6 Sides</option>
@@ -64,7 +64,7 @@
     function rollDice() {
       const sides = document.getElementById('sides').value;
 
-      fetch('https://sprint-3-b8d8b6aqgzdnavez.uaenorth-01.azurewebsites.net/roll' + sides)
+      fetch('/roll?sides=' + sides)
         .then(response => response.json())
         .then(data => {
           document.getElementById("result").innerHTML = `Rolled: ${data.roll}`;
