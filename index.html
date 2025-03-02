@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,25 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 20px;
       text-align: center;
-      background-color: #E6E6FA;
-      color: #4B0082;
+      background-color: #E6E6FA; /* Lavender background */
+      color: #4B0082; /* Indigo text for contrast */
     }
 
     button {
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
-      background-color: #D8BFD8;
-      border: 2px solid #BA55D3;
+      background-color: #D8BFD8; /* Thistle button color */
+      border: 2px solid #BA55D3; /* Medium Orchid border */
       border-radius: 8px;
       color: #4B0082;
       transition: background-color 0.3s, transform 0.2s;
     }
 
     button:hover {
-      background-color: #BA55D3;
+      background-color: #BA55D3; /* Medium Orchid on hover */
       color: #fff;
       transform: scale(1.05);
     }
@@ -39,7 +41,7 @@
       padding: 5px;
       border: 2px solid #BA55D3;
       border-radius: 5px;
-      background-color: #FFF0F5;
+      background-color: #FFF0F5; /* Lavender Blush for select */
       color: #4B0082;
     }
   </style>
@@ -47,8 +49,6 @@
 
 <body>
   <h1>Dice Roller API Test</h1>
-  <p>This page tests the remote Dice Roller API.</p>
-
   <label for="sides">Select Dice Sides:</label>
   <select id="sides">
     <option value="6">6 Sides</option>
@@ -56,28 +56,15 @@
     <option value="20">20 Sides</option>
   </select>
   <br><br>
-  
-  <button onclick="wakeUpServer()">Wake Up Server</button>
   <button onclick="rollDice()">Roll the Dice</button>
 
   <div class="result" id="result"></div>
 
   <script>
-    const API_URL = "https://sprint-3-b8d8b6aqgzdnavez.uaenorth-01.azurewebsites.net";
-
-    // ✅ Asynchronous call to wake up the backend
-    function wakeUpServer() {
-      fetch(`${API_URL}/wake-up`)
-        .then(response => response.json())
-        .then(data => console.log("Backend Wake-up:", data))
-        .catch(error => console.error("Wake-up Error:", error));
-    }
-
-    // ✅ Function to roll the dice
     function rollDice() {
       const sides = document.getElementById('sides').value;
 
-      fetch(`${API_URL}/roll?sides=${sides}`)
+      fetch('https://sprint-3-b8d8b6aqgzdnavez.uaenorth-01.azurewebsites.net/roll?sides=' + sides)
         .then(response => response.json())
         .then(data => {
           document.getElementById("result").innerHTML = `Rolled: ${data.roll}`;
@@ -86,4 +73,5 @@
     }
   </script>
 </body>
+
 </html>
