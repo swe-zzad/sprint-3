@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 app.use(cors({ origin: '*', method: ["GET", "POST" ,"UPDATE"]}));
 
 // Serve static files from 'public' directory
-app.use(express.static(path.join(__dirname, 'stc')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.post("/calculate-risk", jsonParser, function (req, res) {
   const { age, height, weight, bloodPressure, familyHistory } = req.body;
