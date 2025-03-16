@@ -1,16 +1,30 @@
 This website shows a health risk calculator
 
-Mahmoud Darwish b00095043@aus.edu
-
-
-
-
-
+- Mahmoud Darwish b00095043@aus.edu
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
+- .
 
 
 Zoya Muneeb g00093764@aus.edu Zoya Anwar g00095580@aus.edu Abdul Malik Ansari b00093732@aus.edu
 
-All the content is original.
+All the content is original. With the help of our freinds from open ai
 
 To execute this file:
 
