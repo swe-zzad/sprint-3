@@ -1,4 +1,4 @@
-This website shows a dice roller that returns a dice number from the server.
+This website shows a health risk calculator
 
 Mahmoud Darwish b00095043@aus.edu
 
